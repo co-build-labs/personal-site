@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farah Ali — Tech Executive | Speaker | Advisor | Board Member</title>
+  <meta name="description" content="Farah Ali is a tech executive, keynote speaker, and board member with 20+ years leading engineering at Microsoft, eBay, and Electronic Arts. Available for speaking, consulting, and board engagements." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0f1f3d;
+      --teal:   #0d9488;
+      --teal-light: #14b8a6;
+      --gold:   #f59e0b;
+      --light:  #f8fafc;
+      --mid:    #e2e8f0;
+      --text:   #1e293b;
+      --muted:  #64748b;
+      --white:  #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,.10);
+      --shadow-lg: 0 16px 48px rgba(0,0,0,.14);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(15,31,61,.96);
+      backdrop-filter: blur(12px);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 500;
+      letter-spacing: .03em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--teal-light); }
+    .nav-cta {
+      background: var(--teal);
+      color: var(--white) !important;
+      padding: .45rem 1.2rem;
+      border-radius: 6px;
+      transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--teal-light) !important; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3461 60%, #0d3350 100%);
+      display: flex; align-items: center;
+      padding: 100px 2rem 60px;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 5rem;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(13,148,136,.15);
+      border: 1px solid rgba(13,148,136,.4);
+      color: var(--teal-light);
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow span { width: 6px; height: 6px; background: var(--teal-light); border-radius: 50%; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    h1 em { color: var(--teal-light); font-style: normal; }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.72);
+      max-width: 520px;
+      margin-bottom: 2rem;
+      line-height: 1.75;
+    }
+    .hero-tags {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      margin-bottom: 2.5rem;
+    }
+    .tag {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.85);
+      font-size: .78rem;
+      font-weight: 500;
+      padding: .3rem .85rem;
+      border-radius: 999px;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      padding: .85rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.35);
+      padding: .85rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--teal-light); background: rgba(13,148,136,.1); }
+
+    /* headshot card */
+    .hero-photo-wrap {
+      display: flex; justify-content: center;
+    }
+    .hero-photo-card {
+      position: relative;
+      width: 360px;
+    }
+    .hero-photo-card::before {
+      content: '';
+      position: absolute;
+      inset: -16px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--teal) 0%, transparent 60%);
+      opacity: .35;
+      z-index: 0;
+    }
+    .hero-photo-card img {
+      position: relative; z-index: 1;
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-stats {
+      position: absolute;
+      bottom: -20px; left: -30px;
+      z-index: 2;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      box-shadow: var(--shadow-lg);
+      display: flex; gap: 1.5rem;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: .7rem;
+      color: var(--muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    /* ── LOGOS (past employers) ── */
+    #logos {
+      background: var(--light);
+      padding: 3rem 2rem;
+      border-bottom: 1px solid var(--mid);
+    }
+    .logos-inner {
+      max-width: 960px; margin: 0 auto;
+    }
+    .logos-label {
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .logos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem 4rem;
+    }
+    .logo-pill {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--muted);
+      letter-spacing: -.01em;
+      opacity: .7;
+      transition: opacity .2s;
+    }
+    .logo-pill:hover { opacity: 1; }
+
+    /* ── SECTION DEFAULTS ── */
+    section { padding: 90px 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: .75rem;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
+    p { color: var(--muted); line-height: 1.75; }
+
+    /* ── ABOUT ── */
+    #about .section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .about-text p { margin-bottom: 1rem; font-size: 1.02rem; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+    .highlight-card {
+      background: var(--light);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.25rem;
+    }
+    .highlight-card strong {
+      display: block;
+      color: var(--navy);
+      font-size: .95rem;
+      margin-bottom: .2rem;
+    }
+    .highlight-card span { font-size: .88rem; color: var(--muted); }
+
+    /* ── SERVICES ── */
+    #services { background: var(--light); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.25rem 2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--mid);
+      transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .service-icon {
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      flex-shrink: 0;
+    }
+    .service-card h3 { font-size: 1.25rem; margin-bottom: .75rem; }
+    .service-card p { font-size: .93rem; flex: 1; margin-bottom: 1.5rem; }
+    .service-list {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+    .service-list li {
+      font-size: .88rem;
+      color: var(--muted);
+      padding: .35rem 0;
+      border-bottom: 1px solid var(--mid);
+      display: flex; align-items: flex-start; gap: .6rem;
+    }
+    .service-list li:last-child { border-bottom: none; }
+    .service-list li::before {
+      content: '✓';
+      color: var(--teal);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: .05rem;
+    }
+    .service-cta {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: .7rem 1.5rem;
+      border-radius: 7px;
+      font-size: .88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s;
+      margin-top: auto;
+    }
+    .service-cta:hover { background: var(--teal); }
+    .service-card.featured {
+      border-color: var(--teal);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card.featured::before {
+      content: 'Most Requested';
+      position: absolute; top: 1rem; right: 1rem;
+      background: var(--teal);
+      color: var(--white);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .3rem .75rem;
+      border-radius: 999px;
+    }
+
+    /* ── SPEAKING TOPICS ── */
+    #topics .section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .topics-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .topic-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1.1rem 1.25rem;
+      background: var(--white);
+      border: 1px solid var(--mid);
+      border-radius: var(--radius);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .topic-item:hover { border-color: var(--teal); box-shadow: 0 4px 12px rgba(13,148,136,.1); }
+    .topic-num {
+      font-size: .85rem;
+      font-weight: 800;
+      color: var(--teal);
+      min-width: 28px;
+      line-height: 1.6;
+    }
+    .topic-item h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
+    .topic-item p { font-size: .85rem; margin: 0; }
+
+    .speaking-proof {
+      background: var(--navy);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      color: var(--white);
+      margin-top: 2.5rem;
+    }
+    .speaking-proof h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 1.25rem; }
+    .proof-items { display: flex; flex-direction: column; gap: .85rem; }
+    .proof-item {
+      display: flex; gap: .75rem; align-items: flex-start;
+      padding: .75rem;
+      background: rgba(255,255,255,.06);
+      border-radius: 8px;
+    }
+    .proof-dot { width: 8px; height: 8px; background: var(--teal-light); border-radius: 50%; flex-shrink: 0; margin-top: .45rem; }
+    .proof-item span { font-size: .88rem; color: rgba(255,255,255,.8); line-height: 1.55; }
+
+    /* ── CAREER ── */
+    #career { background: var(--light); }
+    .timeline {
+      position: relative;
+      margin-top: 3rem;
+      padding-left: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--teal), var(--mid));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.25rem;
+      padding-left: 2rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.55rem; top: .4rem;
+      width: 14px; height: 14px;
+      background: var(--teal);
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--teal);
+    }
+    .timeline-meta {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--teal);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: .35rem;
+    }
+    .timeline-item h3 { margin-bottom: .15rem; }
+    .timeline-company {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: .4rem;
+    }
+    .timeline-item p { font-size: .9rem; }
+
+    /* ── IMPACT ── */
+    #impact .section-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .impact-card {
+      text-align: center;
+      padding: 2rem 1.25rem;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .impact-num {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .impact-label {
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--navy); }
+    #testimonials h2 { color: var(--white); }
+    #testimonials .section-label { color: var(--teal-light); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .testimonial-quote {
+      font-size: .95rem;
+      color: rgba(255,255,255,.82);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex; align-items: center; gap: .85rem;
+    }
+    .author-avatar {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: .9rem;
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .author-title { font-size: .78rem; color: rgba(255,255,255,.55); }
+
+    /* ── CONTACT / LEAD GEN ── */
+    #contact {
+      background: var(--light);
+    }
+    .contact-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 1rem; }
+    .contact-info p { margin-bottom: 2rem; }
+    .contact-reasons { display: flex; flex-direction: column; gap: 1rem; }
+    .reason {
+      display: flex; gap: .9rem; align-items: flex-start;
+    }
+    .reason-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: var(--white);
+      border: 1.5px solid var(--mid);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .reason-text strong { display: block; font-size: .95rem; color: var(--navy); margin-bottom: .15rem; }
+    .reason-text span { font-size: .85rem; color: var(--muted); }
+
+    /* FORM */
+    .contact-form-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.75rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--mid);
+    }
+    .form-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .35rem;
+    }
+    .form-subtitle { font-size: .88rem; margin-bottom: 2rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: .45rem; }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: .02em;
+    }
+    input, select, textarea {
+      padding: .7rem 1rem;
+      border: 1.5px solid var(--mid);
+      border-radius: 8px;
+      font-size: .9rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color .2s;
+      width: 100%;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(13,148,136,.12);
+    }
+    textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      width: 100%;
+      background: var(--teal);
+      color: var(--white);
+      border: none;
+      padding: .9rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s;
+      margin-top: 1rem;
+    }
+    .form-submit:hover { background: var(--teal-light); }
+    .form-note {
+      text-align: center;
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: .75rem;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+    }
+    .form-success .checkmark {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .form-success h3 { color: var(--teal); margin-bottom: .5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: .5rem;
+    }
+    .footer-title { color: rgba(255,255,255,.55); font-size: .88rem; margin-bottom: 1.5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .footer-links a {
+      color: rgba(255,255,255,.6);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-photo-wrap { order: -1; }
+      .hero-photo-card { width: 280px; }
+      .hero-stats { left: 0; bottom: -16px; gap: 1rem; }
+      #about .section-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      #topics .section-inner { grid-template-columns: 1fr; gap: 3rem; }
+      #impact .section-inner { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      #impact .section-inner { grid-template-columns: 1fr 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Farah Ali</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Work With Me</a></li>
+    <li><a href="#topics">Speaking</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span></span>Tech Executive &amp; Keynote Speaker</div>
+      <h1>Building the Future<br>of <em>Technology</em><br>and Leadership</h1>
+      <p class="hero-sub">
+        Farah Ali is a seasoned technology executive, keynote speaker, and advisor with 20+ years
+        driving large-scale engineering at Microsoft, eBay, and Electronic Arts — serving
+        500 million players worldwide.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">AI &amp; Technology Strategy</span>
+        <span class="tag">Engineering Leadership</span>
+        <span class="tag">Women in STEM</span>
+        <span class="tag">Entrepreneurship</span>
+        <span class="tag">Diversity &amp; Inclusion</span>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Book a Speaking Engagement</a>
+        <a href="#services" class="btn-outline">Explore Ways to Work Together</a>
+      </div>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-card">
+        <img src="assets/headshot.jpg" alt="Farah Ali — Tech Executive and Keynote Speaker" />
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Yrs Experience</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">500M</span>
+            <span class="stat-label">Users Served</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Big Tech Cos.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS -->
+<div id="logos">
+  <div class="logos-inner">
+    <p class="logos-label">Career experience at world-class organizations</p>
+    <div class="logos-grid">
+      <div class="logo-pill">Microsoft</div>
+      <div class="logo-pill">eBay</div>
+      <div class="logo-pill">Electronic Arts</div>
+      <div class="logo-pill">University of Waterloo</div>
+      <div class="logo-pill">FreightWeb</div>
+      <div class="logo-pill">PWiC</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-text">
+      <div class="section-label">About Farah</div>
+      <h2>Executive. Innovator.<br>Community Builder.</h2>
+      <p>
+        Farah Ali is a technology executive, keynote speaker, entrepreneur, and non-profit founder
+        with a career spanning the world's most influential technology companies. Her journey from
+        a new college graduate at Microsoft to Vice President of Engineering at Electronic Arts
+        reflects a relentless pursuit of impact at scale.
+      </p>
+      <p>
+        At EA, Farah led engineering for the platform powering 500 million global players,
+        growing her team from a handful of engineers to more than 100 people. She has since
+        expanded her focus to AI Transformation and Technology Strategy — helping organizations
+        define where and how emerging technologies reshape their future.
+      </p>
+      <p>
+        Beyond the corporate world, Farah co-founded <strong>Pakistani Women in Computing (PWiC)</strong>,
+        a global community connecting women in STEM, and <strong>One Good Act</strong>, a non-profit
+        empowering communities living below the poverty line. She is an angel investor, startup advisor,
+        and passionate advocate for representation in tech.
+      </p>
+      <div style="margin-top:2rem;">
+        <a href="#contact" class="btn-primary">Connect with Farah</a>
+      </div>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <strong>VP of AI Transformation &amp; Technology, EA</strong>
+        <span>Defining technology strategy for one of the world's largest gaming companies</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Co-Founder &amp; Board Chair, PWiC</strong>
+        <span>Global community empowering Pakistani women and allies in STEM</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Founder &amp; President, One Good Act</strong>
+        <span>Non-profit focused on economic empowerment for underserved communities</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Angel Investor &amp; Startup Advisor</strong>
+        <span>Advisor at Embedded Ventures and multiple early-stage technology companies</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Educator &amp; Adjunct Faculty</strong>
+        <span>University of Washington, Michael G. Foster School of Business</span>
+      </div>
+      <div class="highlight-card">
+        <strong>Co-Founder &amp; CTO, FreightWeb</strong>
+        <span>VC-backed logistics tech startup optimizing freight operations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">Work With Farah</div>
+    <h2>Three Ways to Engage</h2>
+    <p style="max-width:560px;">
+      Whether you need an inspiring keynote, strategic technology guidance, or experienced
+      board-level leadership, Farah brings deep expertise and authentic conviction to every engagement.
+    </p>
+    <div class="services-grid">
+
+      <div class="service-card featured">
+        <div class="service-icon">🎤</div>
+        <h3>Keynote Speaking</h3>
+        <p>Compelling, research-backed talks that move audiences to action on AI, tech leadership, and building inclusive organizations.</p>
+        <ul class="service-list">
+          <li>Keynote &amp; plenary sessions</li>
+          <li>Corporate all-hands &amp; retreats</li>
+          <li>Industry conferences &amp; summits</li>
+          <li>University &amp; student events</li>
+          <li>Panel moderation &amp; fireside chats</li>
+        </ul>
+        <a href="#contact" class="service-cta">Book a Talk</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💡</div>
+        <h3>Strategic Consulting</h3>
+        <p>Hands-on partnership to help technology organizations navigate AI transformation, scale engineering teams, and build executive pipelines.</p>
+        <ul class="service-list">
+          <li>AI &amp; technology strategy</li>
+          <li>Engineering org design &amp; scaling</li>
+          <li>Executive coaching &amp; mentorship</li>
+          <li>Product &amp; platform strategy</li>
+          <li>Diversity &amp; inclusion programs</li>
+        </ul>
+        <a href="#contact" class="service-cta">Start a Conversation</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏛️</div>
+        <h3>Board Membership</h3>
+        <p>Seasoned executive perspective for boards navigating technology disruption, talent strategy, and the responsible adoption of AI.</p>
+        <ul class="service-list">
+          <li>Corporate board advisor</li>
+          <li>Non-profit board leadership</li>
+          <li>Technology &amp; audit committees</li>
+          <li>Advisory board roles</li>
+          <li>Venture portfolio companies</li>
+        </ul>
+        <a href="#contact" class="service-cta">Explore Board Roles</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING TOPICS -->
+<section id="topics">
+  <div class="section-inner">
+    <div>
+      <div class="section-label">Speaking Topics</div>
+      <h2>Talks That<br>Spark Change</h2>
+      <p style="margin-bottom: 0; max-width:420px;">
+        Farah's talks combine two decades of hands-on experience with data-driven
+        insights — crafted for executives, engineers, and emerging leaders alike.
+      </p>
+      <div class="speaking-proof">
+        <h3>Past Speaking Highlights</h3>
+        <div class="proof-items">
+          <div class="proof-item">
+            <div class="proof-dot"></div>
+            <span>Keynote Speaker — Girls Who Code Summer Immersion Program (3 consecutive years)</span>
+          </div>
+          <div class="proof-item">
+            <div class="proof-dot"></div>
+            <span>Grace Hopper Celebration — Largest tech conference for women in computing</span>
+          </div>
+          <div class="proof-item">
+            <div class="proof-dot"></div>
+            <span>Open SV Forum 2019 — Engineering leadership &amp; player technology</span>
+          </div>
+          <div class="proof-item">
+            <div class="proof-dot"></div>
+            <span>Startup Grind Islamabad — Entrepreneurship &amp; women in STEM fireside chat</span>
+          </div>
+          <div class="proof-item">
+            <div class="proof-dot"></div>
+            <span>EA All-Hands &amp; Internal Executive Events — Technology vision &amp; culture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topics-grid">
+      <div class="topic-item">
+        <div class="topic-num">01</div>
+        <div>
+          <h4>AI Transformation at Scale</h4>
+          <p>How enterprises can responsibly adopt AI without losing the human element — strategies from the trenches of big tech.</p>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">02</div>
+        <div>
+          <h4>Engineering Leadership in the Modern Era</h4>
+          <p>Building high-performing teams, navigating ambiguity, and growing from individual contributor to C-suite.</p>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">03</div>
+        <div>
+          <h4>Women &amp; Underrepresented Groups in Tech</h4>
+          <p>Practical frameworks for organizations and individuals seeking to close the representation gap in STEM.</p>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">04</div>
+        <div>
+          <h4>From Engineer to Entrepreneur</h4>
+          <p>Lessons from building a VC-backed startup, angel investing, and knowing when to leap from corporate to founder.</p>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">05</div>
+        <div>
+          <h4>Building Technology for Billions</h4>
+          <p>The architecture, culture, and leadership required to scale platforms serving hundreds of millions of users.</p>
+        </div>
+      </div>
+      <div class="topic-item">
+        <div class="topic-num">06</div>
+        <div>
+          <h4>Purpose-Driven Leadership</h4>
+          <p>How to align personal values with organizational goals — and why the most impactful leaders lead with empathy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career">
+  <div class="section-inner">
+    <div class="section-label">Career Journey</div>
+    <h2>A Track Record<br>of Impact</h2>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start; margin-top: 1rem;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-meta">Present</div>
+          <h3>VP, AI Transformation &amp; Technology</h3>
+          <div class="timeline-company">Electronic Arts (EA)</div>
+          <p>Defining EA's AI strategy and future technology roadmap for one of the world's largest interactive entertainment companies.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Prior Role</div>
+          <h3>VP, Technology Growth Strategy</h3>
+          <div class="timeline-company">Electronic Arts (EA)</div>
+          <p>Led technology growth initiatives and created strategy for EA's next generation player platform, reporting to the CTO.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Engineering Leadership</div>
+          <h3>VP &amp; Senior Director, Player &amp; Developer Experience</h3>
+          <div class="timeline-company">Electronic Arts (EA)</div>
+          <p>Built and scaled engineering teams from under 10 to 100+ engineers. Platform supports 500M global players. Team earned company-wide award for impact.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">E-Commerce</div>
+          <h3>Director of Engineering</h3>
+          <div class="timeline-company">eBay</div>
+          <p>Senior engineering leadership driving scale and reliability across eBay's global marketplace platform.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Career Start</div>
+          <h3>Software Engineer → Senior Engineering Leadership</h3>
+          <div class="timeline-company">Microsoft</div>
+          <p>Began career as a new college graduate, rising through engineering ranks at one of the world's premier technology companies.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-meta">Entrepreneurship</div>
+            <h3>Co-Founder &amp; CTO</h3>
+            <div class="timeline-company">FreightWeb</div>
+            <p>Co-founded VC-backed logistics technology startup optimizing partial truckload freight operations.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-meta">Community</div>
+            <h3>Co-Founder &amp; Board Chair</h3>
+            <div class="timeline-company">Pakistani Women in Computing (PWiC)</div>
+            <p>Founded global organization connecting Pakistani women in tech and their allies across the globe.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-meta">Social Impact</div>
+            <h3>Founder &amp; President</h3>
+            <div class="timeline-company">One Good Act</div>
+            <p>Non-profit focused on economic empowerment for communities living below the poverty line.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-meta">Investing</div>
+            <h3>Advisor</h3>
+            <div class="timeline-company">Embedded Ventures &amp; Multiple Startups</div>
+            <p>Angel investor and startup advisor focused on early-stage technology companies.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-meta">Education</div>
+            <h3>B.S. Mathematics &amp; Computer Science</h3>
+            <div class="timeline-company">University of Waterloo</div>
+            <p>Foundation in rigorous analytical and computational thinking. Additional studies at City University of Seattle and Kauffman Fellows / TechStars.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<section id="impact" style="background: var(--white); padding-top: 0;">
+  <div class="section-inner" style="margin-top: 0;">
+    <div class="section-label" style="text-align:center; margin-bottom: .5rem;">Impact by the Numbers</div>
+    <h2 style="text-align:center; margin-bottom:0;">Results That Speak<br>for Themselves</h2>
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem;">
+      <div class="impact-card">
+        <div class="impact-num">500M</div>
+        <div class="impact-label">Global users served by platforms Farah led</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-num">100+</div>
+        <div class="impact-label">Engineers grown and mentored at EA alone</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-num">20+</div>
+        <div class="impact-label">Years in technology leadership across 3 big tech companies</div>
+      </div>
+      <div class="impact-card">
+        <div class="impact-num">3</div>
+        <div class="impact-label">Organizations founded to advance underrepresented communities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="section-label">What People Say</div>
+    <h2>Trusted by Leaders<br>Across the Industry</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "I was lucky to report to Farah for four years at EA. She grew our team from a few people
+          to over a hundred and guided disparate groups toward a shared mission. Our organization
+          earned a company-wide award for impact under her leadership."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">E</div>
+          <div>
+            <div class="author-name">Engineering Leader</div>
+            <div class="author-title">Electronic Arts</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Farah leads with a strong vision while supporting her teams on a personal level.
+          She stands out for her charisma, which creates a fun, collaborative environment
+          where people are motivated to do their best work."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div>
+            <div class="author-name">Colleague</div>
+            <div class="author-title">Electronic Arts</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Farah's ability to articulate a technology vision and rally an entire organization
+          behind it is rare. She brings both the technical credibility and the human touch
+          that make people genuinely believe in the mission."
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div>
+            <div class="author-name">Peer Executive</div>
+            <div class="author-title">Technology Industry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / LEAD GEN -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-label">Get In Touch</div>
+      <h2>Let's Create<br>Something Great</h2>
+      <p>
+        Whether you're planning a conference, building a leadership team, or looking for
+        a board member who truly understands technology — Farah would love to hear from you.
+      </p>
+      <div class="contact-reasons">
+        <div class="reason">
+          <div class="reason-icon">🎤</div>
+          <div class="reason-text">
+            <strong>Speaking Engagements</strong>
+            <span>Conferences, corporate events, universities, and virtual keynotes</span>
+          </div>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">💡</div>
+          <div class="reason-text">
+            <strong>Consulting &amp; Advisory</strong>
+            <span>AI strategy, engineering leadership, and organizational transformation</span>
+          </div>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">🏛️</div>
+          <div class="reason-text">
+            <strong>Board Membership</strong>
+            <span>Corporate boards, non-profit boards, and advisory council roles</span>
+          </div>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">🤝</div>
+          <div class="reason-text">
+            <strong>Media &amp; Press</strong>
+            <span>Interviews, podcast appearances, and thought leadership contributions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-title">Send Farah a Message</div>
+        <p class="form-subtitle">Fill out the form below and Farah's team will respond within 2 business days.</p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="form-group">
+            <label for="organization">Organization</label>
+            <input type="text" id="organization" name="organization" placeholder="Acme Corp" />
+          </div>
+          <div class="form-group full">
+            <label for="type">Type of Engagement *</label>
+            <select id="type" name="type" required>
+              <option value="">— Select one —</option>
+              <option value="speaking">Speaking Engagement</option>
+              <option value="consulting">Consulting / Advisory</option>
+              <option value="board">Board Membership</option>
+              <option value="media">Media / Press</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message">Tell me about your opportunity *</label>
+            <textarea id="message" name="message" placeholder="Share details about your event, project, or opportunity — dates, format, audience, and anything else that would help Farah understand your needs." required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit">Send Message →</button>
+        <p class="form-note">🔒 Your information is kept strictly confidential.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="checkmark">✅</div>
+        <h3>Message Received!</h3>
+        <p>Thank you for reaching out. Farah's team will be in touch within 2 business days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Farah Ali</div>
+  <div class="footer-title">VP, AI Transformation &amp; Technology · Speaker · Advisor · Board Member</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#services">Work With Me</a>
+    <a href="#topics">Speaking Topics</a>
+    <a href="#career">Career</a>
+    <a href="https://www.linkedin.com/in/farahmali/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Farah Ali. All rights reserved.</div>
+</footer>
+
+<script>
+  // smooth active nav state
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--teal-light)' : '';
+    });
+  });
+
+  // form submission demo
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    // TODO: replace with your form backend (Formspree, Netlify Forms, etc.)
+    // e.g. fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(e.target) })
+  }
+</script>
+</body>
+</html>

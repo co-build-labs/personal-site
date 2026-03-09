@@ -1,0 +1,8 @@
+Save your headshot photo as:
+
+  /home/user/farah-ali-website/assets/headshot.jpg
+
+The image should ideally be:
+- Aspect ratio: 4:5 (portrait)
+- Minimum: 720 x 900 px
+- Format: JPG or WebP
