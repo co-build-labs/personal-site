@@ -211,6 +211,25 @@
     .footer-links a { color:var(--muted); text-decoration:none; font-size:.82rem; transition:color .2s; }
     .footer-links a:hover { color:var(--teal); }
     .footer-copy { font-size:.74rem; color:var(--muted); opacity:.6; }
+    #boards { background:var(--white); }
+    .boards-layout { display:grid; grid-template-columns:3fr 2fr; gap:4rem; align-items:start; margin-top:2.5rem; }
+    .boards-col-title { font-size:.9rem; font-weight:700; color:var(--primary); margin-bottom:1.25rem; }
+    .board-grid { display:grid; grid-template-columns:1fr 1fr; gap:.85rem; }
+    .board-card { background:var(--light); border:1px solid var(--mid); border-radius:var(--radius); padding:1rem 1.1rem; display:flex; align-items:flex-start; gap:.65rem; }
+    .board-dot { width:8px; height:8px; background:var(--teal); border-radius:50%; flex-shrink:0; margin-top:.3rem; }
+    .board-card h4 { font-size:.88rem; color:var(--primary); margin-bottom:.1rem; line-height:1.35; }
+    .board-card span { font-size:.76rem; color:var(--muted); }
+    .invest-section { margin-top:2.5rem; }
+    .invest-cloud { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:.85rem; }
+    .invest-pill { background:var(--teal-bg); border:1px solid rgba(13,148,136,.2); color:var(--teal); font-size:.78rem; font-weight:600; padding:.3rem .75rem; border-radius:999px; }
+    .invest-pill.muted { background:var(--light); border-color:var(--mid); color:var(--muted); font-weight:500; }
+    .prof-callout { margin-top:2rem; background:var(--light); border:1px solid var(--mid); border-left:3px solid var(--teal); border-radius:0 var(--radius) var(--radius) 0; padding:1.1rem 1.25rem; }
+    .prof-callout h4 { font-size:.9rem; color:var(--primary); margin-bottom:.3rem; }
+    .prof-callout p { font-size:.82rem; color:var(--muted); margin:0 0 .65rem; line-height:1.6; }
+    .prof-links { display:flex; flex-wrap:wrap; gap:.6rem; }
+    .prof-link { font-size:.78rem; font-weight:600; color:var(--teal); text-decoration:none; }
+    .prof-link:hover { text-decoration:underline; }
+    @media (max-width:960px) { .boards-layout { grid-template-columns:1fr; gap:2.5rem; } .board-grid { grid-template-columns:1fr 1fr; } }
     @media (max-width:960px) {
       .hero-inner { grid-template-columns:1fr; gap:2.5rem; }
       .hero-photo-wrap { order:-1; }
@@ -247,6 +266,7 @@
     <li><a href="#media">Speaking &amp; Media</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#career">Career</a></li>
+    <li><a href="#boards">Boards &amp; Investing</a></li>
     <li><a href="#writing">Writing</a></li>
     <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
   </ul>
@@ -582,11 +602,87 @@
         </div>
         <div class="timeline-item">
           <div class="timeline-meta">Teaching</div>
-          <h3>Educator &amp; Adjunct Faculty</h3>
+          <h3>Affiliate Professor</h3>
           <div class="timeline-company">University of Washington, Seattle</div>
-          <p>Taught 400-level Software Entrepreneurship at the UW Michael G. Foster School of Business. Founding member of WELead — UW Foster's Women's Entrepreneurial Leadership program.</p>
+          <p>Affiliate Professor teaching Software Entrepreneurship (CSE 490A / ENTRE 432) — a cross-listed course between Computer Science &amp; Engineering and the Foster School of Business. Founding member of WELead — UW Foster's Women's Entrepreneurial Leadership program.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="boards">
+  <div class="section-inner">
+    <div class="section-label">Governance · Advisory · Investing</div>
+    <h2>Boards, Advisory &amp; Investing</h2>
+    <p class="section-intro">Farah brings executive and technical depth to boards and startups across the Pacific Northwest and beyond — as a director, advisor, investor, and educator.</p>
+    <div class="boards-layout">
+
+      <div>
+        <div class="boards-col-title">Board &amp; Advisory Roles</div>
+        <div class="board-grid">
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>Madrona Venture Labs</h4><span>Advisor</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>Sofy.ai</h4><span>Board Advisor</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>AboveBoard</h4><span>Board Member / Advisor</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>Embedded Ventures</h4><span>Advisor</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>UW Buerk Center for Entrepreneurship</h4><span>Advisory Board</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>DALIX</h4><span>Board Advisor</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>moveit.pk</h4><span>Board Member / Advisor</span></div>
+          </div>
+          <div class="board-card">
+            <div class="board-dot"></div>
+            <div><h4>Codeschool.pk</h4><span>Board Advisor</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="invest-section">
+          <div class="boards-col-title">Angel Investments</div>
+          <p style="font-size:.84rem;color:var(--muted);margin-bottom:.85rem;line-height:1.65;">Portfolio spanning fintech, agtech, cybersecurity, proptech, aviation, and developer tools — plus venture fund positions.</p>
+          <div class="invest-cloud">
+            <span class="invest-pill">NerdWallet</span>
+            <span class="invest-pill">GrubMarket</span>
+            <span class="invest-pill">Corelight</span>
+            <span class="invest-pill">Orchard</span>
+            <span class="invest-pill">Skyryse</span>
+            <span class="invest-pill">Zoo</span>
+            <span class="invest-pill">AboveBoard</span>
+            <span class="invest-pill muted">Multiple Funds</span>
+            <span class="invest-pill muted">& others</span>
+          </div>
+        </div>
+
+        <div class="prof-callout">
+          <h4>Affiliate Professor — University of Washington</h4>
+          <p>Teaching Software Entrepreneurship (CSE 490A / ENTRE 432), a cross-listed course between the Paul G. Allen School of Computer Science &amp; Engineering and the Michael G. Foster School of Business.</p>
+          <div class="prof-links">
+            <a class="prof-link" href="https://www.cs.washington.edu/academics/undergraduate/degree-requirements/courses/" target="_blank" rel="noopener">View Course →</a>
+            <a class="prof-link" href="https://www.linkedin.com/posts/farahmali_teachinglife-activity-7016209811339972608-7560" target="_blank" rel="noopener">LinkedIn Post →</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -728,6 +824,7 @@
     <a href="#media">Speaking &amp; Media</a>
     <a href="#awards">Awards</a>
     <a href="#career">Career</a>
+    <a href="#boards">Boards &amp; Investing</a>
     <a href="#writing">Writing</a>
     <a href="https://www.linkedin.com/in/farahmali/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://medium.com/@fali" target="_blank" rel="noopener">Medium</a>
