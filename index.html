@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farah Ali — Tech Executive | Speaker | Advisor | Board Member</title>
+  <title>Farah Ali — Tech Executive | Board Member | Advisor | Speaker</title>
   <meta name="description" content="Farah Ali is a tech executive, keynote speaker, and board member with 20+ years leading engineering at Microsoft, eBay, and Electronic Arts. Available for speaking, consulting, and board engagements." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:   #0f1f3d;
-      --teal:   #0d9488;
+      --primary:    #0f172a;
+      --teal:       #0d9488;
       --teal-light: #14b8a6;
-      --gold:   #f59e0b;
-      --light:  #f8fafc;
-      --mid:    #e2e8f0;
-      --text:   #1e293b;
-      --muted:  #64748b;
-      --white:  #ffffff;
-      --radius: 12px;
-      --shadow: 0 4px 24px rgba(0,0,0,.10);
-      --shadow-lg: 0 16px 48px rgba(0,0,0,.14);
+      --teal-bg:    #f0fdfa;
+      --light:      #f8fafc;
+      --mid:        #e2e8f0;
+      --text:       #334155;
+      --muted:      #64748b;
+      --white:      #ffffff;
+      --radius:     10px;
+      --shadow:     0 1px 6px rgba(0,0,0,.05);
+      --shadow-md:  0 4px 16px rgba(0,0,0,.08);
+      --shadow-lg:  0 10px 36px rgba(0,0,0,.11);
     }
 
     html { scroll-behavior: smooth; }
@@ -33,301 +34,314 @@
       color: var(--text);
       background: var(--white);
       line-height: 1.6;
+      font-size: 16px;
     }
+
+    /* ── TYPOGRAPHY ── */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Inter', sans-serif;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+    }
+    h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .4rem; }
+    h4 { font-size: 1rem; font-weight: 600; margin-bottom: .2rem; }
+    p { color: var(--text); line-height: 1.75; }
 
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(15,31,61,.96);
+      background: rgba(255,255,255,.97);
       backdrop-filter: blur(12px);
       padding: 0 2rem;
       display: flex; align-items: center; justify-content: space-between;
-      height: 68px;
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      height: 62px;
+      border-bottom: 1px solid var(--mid);
     }
     .nav-logo {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 700;
-      letter-spacing: .02em;
+      letter-spacing: -.02em;
+      color: var(--primary);
       text-decoration: none;
     }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
     .nav-links a {
-      color: rgba(255,255,255,.75);
+      color: var(--muted);
       text-decoration: none;
-      font-size: .875rem;
+      font-size: .85rem;
       font-weight: 500;
-      letter-spacing: .03em;
       transition: color .2s;
     }
-    .nav-links a:hover { color: var(--teal-light); }
+    .nav-links a:hover { color: var(--teal); }
     .nav-cta {
-      background: var(--teal);
+      background: var(--teal) !important;
       color: var(--white) !important;
-      padding: .45rem 1.2rem;
+      padding: .4rem 1.1rem;
       border-radius: 6px;
+      font-weight: 600 !important;
       transition: background .2s !important;
     }
-    .nav-cta:hover { background: var(--teal-light) !important; color: var(--white) !important; }
+    .nav-cta:hover { background: var(--teal-light) !important; }
 
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3461 60%, #0d3350 100%);
+      background: linear-gradient(150deg, #ffffff 0%, var(--teal-bg) 100%);
       display: flex; align-items: center;
-      padding: 100px 2rem 60px;
+      padding: 110px 2rem 60px;
     }
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 5rem;
+      grid-template-columns: 1fr 400px;
+      gap: 4.5rem;
       align-items: center;
     }
     .hero-eyebrow {
       display: inline-flex; align-items: center; gap: .5rem;
-      background: rgba(13,148,136,.15);
-      border: 1px solid rgba(13,148,136,.4);
-      color: var(--teal-light);
-      font-size: .8rem;
+      background: var(--teal-bg);
+      border: 1px solid rgba(13,148,136,.25);
+      color: var(--teal);
+      font-size: .75rem;
       font-weight: 600;
       letter-spacing: .08em;
       text-transform: uppercase;
       padding: .35rem .9rem;
       border-radius: 999px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
-    .hero-eyebrow span { width: 6px; height: 6px; background: var(--teal-light); border-radius: 50%; }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      flex-shrink: 0;
     }
-    h1 em { color: var(--teal-light); font-style: normal; }
+    h1 em { color: var(--teal); font-style: normal; }
     .hero-sub {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,.72);
+      font-size: 1.05rem;
+      color: var(--muted);
       max-width: 520px;
       margin-bottom: 2rem;
-      line-height: 1.75;
+      line-height: 1.8;
     }
     .hero-tags {
-      display: flex; flex-wrap: wrap; gap: .6rem;
-      margin-bottom: 2.5rem;
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-bottom: 2.25rem;
     }
     .tag {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.15);
-      color: rgba(255,255,255,.85);
-      font-size: .78rem;
+      background: var(--white);
+      border: 1px solid var(--mid);
+      color: var(--text);
+      font-size: .75rem;
       font-weight: 500;
-      padding: .3rem .85rem;
+      padding: .28rem .8rem;
       border-radius: 999px;
     }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
     .btn-primary {
       background: var(--teal);
       color: var(--white);
-      padding: .85rem 2rem;
+      padding: .8rem 1.75rem;
       border-radius: 8px;
       font-weight: 600;
-      font-size: .95rem;
+      font-size: .9rem;
       text-decoration: none;
       transition: background .2s, transform .15s;
       display: inline-block;
     }
     .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
     .btn-outline {
-      background: transparent;
-      color: var(--white);
-      border: 1.5px solid rgba(255,255,255,.35);
-      padding: .85rem 2rem;
+      background: var(--white);
+      color: var(--text);
+      border: 1.5px solid var(--mid);
+      padding: .8rem 1.75rem;
       border-radius: 8px;
       font-weight: 600;
-      font-size: .95rem;
+      font-size: .9rem;
       text-decoration: none;
       transition: border-color .2s, background .2s;
       display: inline-block;
     }
-    .btn-outline:hover { border-color: var(--teal-light); background: rgba(13,148,136,.1); }
+    .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
 
-    /* headshot card */
-    .hero-photo-wrap {
-      display: flex; justify-content: center;
-    }
+    /* hero photo */
+    .hero-photo-wrap { display: flex; justify-content: center; }
     .hero-photo-card {
       position: relative;
-      width: 360px;
+      width: 340px;
     }
     .hero-photo-card::before {
       content: '';
       position: absolute;
-      inset: -16px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, var(--teal) 0%, transparent 60%);
-      opacity: .35;
+      inset: -12px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--teal-light) 0%, transparent 60%);
+      opacity: .2;
       z-index: 0;
     }
     .hero-photo-card img {
       position: relative; z-index: 1;
       width: 100%;
-      border-radius: 18px;
+      border-radius: 16px;
       object-fit: cover;
       aspect-ratio: 4/5;
       box-shadow: var(--shadow-lg);
     }
     .hero-stats {
       position: absolute;
-      bottom: -20px; left: -30px;
+      bottom: -18px; left: -24px;
       z-index: 2;
       background: var(--white);
       border-radius: 12px;
-      padding: 1rem 1.25rem;
+      padding: .9rem 1.1rem;
       box-shadow: var(--shadow-lg);
-      display: flex; gap: 1.5rem;
+      border: 1px solid var(--mid);
+      display: flex; gap: 1.25rem;
     }
     .stat-item { text-align: center; }
     .stat-num {
       display: block;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 800;
-      color: var(--navy);
+      color: var(--primary);
+      letter-spacing: -.03em;
       line-height: 1;
     }
     .stat-label {
-      font-size: .7rem;
+      font-size: .65rem;
       color: var(--muted);
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: .05em;
     }
 
-    /* ── LOGOS (past employers) ── */
+    /* ── LOGOS ── */
     #logos {
-      background: var(--light);
-      padding: 3rem 2rem;
+      background: var(--white);
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--mid);
       border-bottom: 1px solid var(--mid);
     }
-    .logos-inner {
-      max-width: 960px; margin: 0 auto;
-    }
+    .logos-inner { max-width: 960px; margin: 0 auto; }
     .logos-label {
       text-align: center;
-      font-size: .78rem;
+      font-size: .72rem;
       font-weight: 600;
       letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
     }
     .logos-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      gap: 2.5rem 4rem;
+      gap: 2rem 3.5rem;
     }
     .logo-pill {
-      font-family: 'Inter', sans-serif;
       font-weight: 700;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       color: var(--muted);
       letter-spacing: -.01em;
-      opacity: .7;
-      transition: opacity .2s;
+      opacity: .6;
+      transition: opacity .2s, color .2s;
+      cursor: default;
     }
-    .logo-pill:hover { opacity: 1; }
+    .logo-pill:hover { opacity: 1; color: var(--teal); }
 
     /* ── SECTION DEFAULTS ── */
-    section { padding: 90px 2rem; }
+    section { padding: 80px 2rem; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
     .section-label {
-      font-size: .78rem;
+      font-size: .72rem;
       font-weight: 700;
       letter-spacing: .12em;
       text-transform: uppercase;
       color: var(--teal);
-      margin-bottom: .75rem;
+      margin-bottom: .6rem;
     }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-      color: var(--navy);
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
-    }
-    h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: .5rem; }
-    p { color: var(--muted); line-height: 1.75; }
+    .section-intro { max-width: 560px; color: var(--muted); margin-bottom: 3rem; }
 
     /* ── ABOUT ── */
+    #about { background: var(--light); }
     #about .section-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 4.5rem;
       align-items: start;
     }
-    .about-text p { margin-bottom: 1rem; font-size: 1.02rem; }
+    .about-text p { margin-bottom: 1rem; font-size: 1rem; color: var(--text); }
     .about-text p:last-child { margin-bottom: 0; }
-    .about-highlights { display: flex; flex-direction: column; gap: 1.25rem; }
+    .about-highlights { display: flex; flex-direction: column; gap: 1rem; }
     .highlight-card {
-      background: var(--light);
-      border-left: 4px solid var(--teal);
+      background: var(--white);
+      border-left: 3px solid var(--teal);
       border-radius: 0 8px 8px 0;
-      padding: 1rem 1.25rem;
+      padding: .9rem 1.1rem;
+      box-shadow: var(--shadow);
     }
     .highlight-card strong {
       display: block;
-      color: var(--navy);
-      font-size: .95rem;
-      margin-bottom: .2rem;
+      color: var(--primary);
+      font-size: .9rem;
+      margin-bottom: .15rem;
     }
-    .highlight-card span { font-size: .88rem; color: var(--muted); }
+    .highlight-card span { font-size: .84rem; color: var(--muted); }
 
     /* ── SERVICES ── */
-    #services { background: var(--light); }
+    #services { background: var(--white); }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3rem;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
     }
     .service-card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 2.25rem 2rem;
-      box-shadow: var(--shadow);
+      padding: 2rem 1.75rem;
+      box-shadow: var(--shadow-md);
       border: 1px solid var(--mid);
       transition: transform .2s, box-shadow .2s;
       display: flex; flex-direction: column;
     }
-    .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
     .service-icon {
-      width: 52px; height: 52px;
-      background: linear-gradient(135deg, var(--teal), var(--teal-light));
-      border-radius: 14px;
+      width: 46px; height: 46px;
+      background: var(--teal-bg);
+      border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
       flex-shrink: 0;
     }
-    .service-card h3 { font-size: 1.25rem; margin-bottom: .75rem; }
-    .service-card p { font-size: .93rem; flex: 1; margin-bottom: 1.5rem; }
+    .service-card h3 { font-size: 1.15rem; margin-bottom: .6rem; }
+    .service-card > p { font-size: .9rem; color: var(--muted); flex: 1; margin-bottom: 1.25rem; }
     .service-list {
       list-style: none;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
       flex: 1;
     }
     .service-list li {
-      font-size: .88rem;
+      font-size: .85rem;
       color: var(--muted);
-      padding: .35rem 0;
+      padding: .3rem 0;
       border-bottom: 1px solid var(--mid);
-      display: flex; align-items: flex-start; gap: .6rem;
+      display: flex; align-items: flex-start; gap: .5rem;
     }
     .service-list li:last-child { border-bottom: none; }
     .service-list li::before {
@@ -335,259 +349,447 @@
       color: var(--teal);
       font-weight: 700;
       flex-shrink: 0;
-      margin-top: .05rem;
     }
     .service-cta {
       display: inline-block;
-      background: var(--navy);
+      background: var(--teal);
       color: var(--white);
       text-align: center;
-      padding: .7rem 1.5rem;
+      padding: .65rem 1.4rem;
       border-radius: 7px;
-      font-size: .88rem;
+      font-size: .85rem;
       font-weight: 600;
       text-decoration: none;
       transition: background .2s;
       margin-top: auto;
     }
-    .service-cta:hover { background: var(--teal); }
+    .service-cta:hover { background: var(--teal-light); }
     .service-card.featured {
       border-color: var(--teal);
       position: relative;
       overflow: hidden;
     }
-    .service-card.featured::before {
+    .service-card.featured::after {
       content: 'Most Requested';
       position: absolute; top: 1rem; right: 1rem;
-      background: var(--teal);
-      color: var(--white);
-      font-size: .7rem;
+      background: var(--teal-bg);
+      color: var(--teal);
+      font-size: .68rem;
       font-weight: 700;
-      letter-spacing: .06em;
+      letter-spacing: .05em;
       text-transform: uppercase;
-      padding: .3rem .75rem;
+      padding: .25rem .65rem;
       border-radius: 999px;
+      border: 1px solid rgba(13,148,136,.2);
     }
 
     /* ── SPEAKING TOPICS ── */
-    #topics .section-inner {
+    #topics { background: var(--light); }
+    .topics-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 3.5rem;
       align-items: start;
+      margin-top: 2.5rem;
     }
-    .topics-grid { display: flex; flex-direction: column; gap: 1rem; margin-top: 2.5rem; }
+    .topics-grid { display: flex; flex-direction: column; gap: .85rem; }
     .topic-item {
-      display: flex; gap: 1rem; align-items: flex-start;
-      padding: 1.1rem 1.25rem;
+      display: flex; gap: .9rem; align-items: flex-start;
+      padding: 1rem 1.1rem;
       background: var(--white);
       border: 1px solid var(--mid);
       border-radius: var(--radius);
       transition: border-color .2s, box-shadow .2s;
     }
-    .topic-item:hover { border-color: var(--teal); box-shadow: 0 4px 12px rgba(13,148,136,.1); }
+    .topic-item:hover { border-color: var(--teal); box-shadow: 0 2px 10px rgba(13,148,136,.08); }
     .topic-num {
-      font-size: .85rem;
+      font-size: .8rem;
       font-weight: 800;
       color: var(--teal);
-      min-width: 28px;
-      line-height: 1.6;
+      min-width: 24px;
+      line-height: 1.75;
     }
-    .topic-item h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .2rem; }
-    .topic-item p { font-size: .85rem; margin: 0; }
+    .topic-item h4 { font-size: .95rem; font-weight: 700; color: var(--primary); margin-bottom: .15rem; }
+    .topic-item p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
 
     .speaking-proof {
-      background: var(--navy);
+      background: var(--white);
+      border: 1px solid var(--mid);
       border-radius: var(--radius);
-      padding: 2.5rem;
-      color: var(--white);
-      margin-top: 2.5rem;
+      padding: 2rem;
+      margin-top: 0;
     }
-    .speaking-proof h3 { color: var(--white); font-size: 1.1rem; margin-bottom: 1.25rem; }
-    .proof-items { display: flex; flex-direction: column; gap: .85rem; }
+    .speaking-proof h3 { color: var(--primary); font-size: 1rem; margin-bottom: 1rem; }
+    .proof-items { display: flex; flex-direction: column; gap: .65rem; }
     .proof-item {
-      display: flex; gap: .75rem; align-items: flex-start;
-      padding: .75rem;
-      background: rgba(255,255,255,.06);
+      display: flex; gap: .65rem; align-items: flex-start;
+      padding: .65rem .85rem;
+      background: var(--light);
       border-radius: 8px;
     }
-    .proof-dot { width: 8px; height: 8px; background: var(--teal-light); border-radius: 50%; flex-shrink: 0; margin-top: .45rem; }
-    .proof-item span { font-size: .88rem; color: rgba(255,255,255,.8); line-height: 1.55; }
+    .proof-dot { width: 7px; height: 7px; background: var(--teal); border-radius: 50%; flex-shrink: 0; margin-top: .42rem; }
+    .proof-item span { font-size: .84rem; color: var(--text); line-height: 1.55; }
+
+    /* ── MEDIA & APPEARANCES ── */
+    #media { background: var(--white); }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .media-card {
+      background: var(--white);
+      border: 1px solid var(--mid);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+    }
+    .media-card:hover {
+      border-color: var(--teal);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .media-type {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--teal-bg);
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      width: fit-content;
+    }
+    .media-card h4 { font-size: .9rem; color: var(--primary); line-height: 1.4; }
+    .media-card p { font-size: .8rem; color: var(--muted); line-height: 1.55; margin: 0; }
+    .media-link-arrow {
+      font-size: .8rem;
+      color: var(--teal);
+      font-weight: 600;
+      margin-top: auto;
+      padding-top: .5rem;
+    }
+    .media-card-nohref {
+      background: var(--light);
+      border: 1px dashed var(--mid);
+      cursor: default;
+    }
+    .media-card-nohref:hover {
+      border-color: var(--mid);
+      box-shadow: none;
+      transform: none;
+    }
+    .media-card-nohref h4 { color: var(--text); }
+
+    /* ── AWARDS ── */
+    #awards { background: var(--light); }
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .award-card {
+      background: var(--white);
+      border: 1px solid var(--mid);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      text-decoration: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .award-card:hover { border-color: var(--teal); box-shadow: var(--shadow-md); }
+    .award-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--teal-bg);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+    .award-card h4 { font-size: .9rem; color: var(--primary); line-height: 1.45; margin-bottom: .2rem; }
+    .award-card p { font-size: .8rem; color: var(--muted); margin: 0; line-height: 1.5; }
+    .award-year {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--teal);
+      background: var(--teal-bg);
+      padding: .15rem .5rem;
+      border-radius: 999px;
+      margin-bottom: .4rem;
+    }
+
+    /* ── PATENTS ── */
+    #patents { background: var(--white); }
+    .patents-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .patent-card {
+      background: var(--light);
+      border: 1px solid var(--mid);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .patent-badge {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--white);
+      border: 1px solid var(--mid);
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      margin-bottom: .75rem;
+    }
+    .patent-card h4 { font-size: .92rem; color: var(--primary); line-height: 1.45; margin-bottom: .35rem; }
+    .patent-card p { font-size: .82rem; color: var(--muted); margin: 0; line-height: 1.6; }
+    .patents-note {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: .84rem;
+      color: var(--muted);
+    }
+    .patents-note a { color: var(--teal); text-decoration: none; }
+    .patents-note a:hover { text-decoration: underline; }
+
+    /* ── WRITING ── */
+    #writing { background: var(--light); }
+    .writing-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
+    .writing-feature {
+      background: var(--white);
+      border: 1px solid var(--mid);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .writing-feature h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+    .writing-feature p { font-size: .88rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem; }
+    .writing-topics { display: flex; flex-direction: column; gap: .65rem; }
+    .writing-topic {
+      display: flex; gap: .65rem; align-items: center;
+      padding: .7rem .9rem;
+      background: var(--light);
+      border-radius: 8px;
+      font-size: .84rem;
+      color: var(--text);
+    }
+    .writing-topic-dot {
+      width: 6px; height: 6px;
+      background: var(--teal);
+      border-radius: 50%; flex-shrink: 0;
+    }
+    .medium-cta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--teal);
+      color: var(--white);
+      padding: .7rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .85rem;
+      text-decoration: none;
+      transition: background .2s;
+      margin-top: 1.25rem;
+    }
+    .medium-cta:hover { background: var(--teal-light); }
 
     /* ── CAREER ── */
-    #career { background: var(--light); }
+    #career { background: var(--white); }
+    .career-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
     .timeline {
       position: relative;
-      margin-top: 3rem;
-      padding-left: 2rem;
+      padding-left: 1.75rem;
     }
     .timeline::before {
       content: '';
       position: absolute;
-      left: 8px; top: 0; bottom: 0;
+      left: 6px; top: 6px; bottom: 0;
       width: 2px;
       background: linear-gradient(to bottom, var(--teal), var(--mid));
     }
     .timeline-item {
       position: relative;
-      margin-bottom: 2.25rem;
-      padding-left: 2rem;
+      margin-bottom: 2rem;
+      padding-left: 1.75rem;
     }
     .timeline-item::before {
       content: '';
       position: absolute;
-      left: -1.55rem; top: .4rem;
-      width: 14px; height: 14px;
+      left: -1.43rem; top: .35rem;
+      width: 12px; height: 12px;
       background: var(--teal);
-      border: 3px solid var(--white);
+      border: 2.5px solid var(--white);
       border-radius: 50%;
       box-shadow: 0 0 0 2px var(--teal);
     }
     .timeline-meta {
-      font-size: .78rem;
-      font-weight: 600;
+      font-size: .7rem;
+      font-weight: 700;
       color: var(--teal);
-      letter-spacing: .05em;
+      letter-spacing: .08em;
       text-transform: uppercase;
+      margin-bottom: .25rem;
+    }
+    .timeline-item h3 { margin-bottom: .1rem; font-size: 1rem; }
+    .timeline-company {
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--primary);
       margin-bottom: .35rem;
     }
-    .timeline-item h3 { margin-bottom: .15rem; }
-    .timeline-company {
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: .4rem;
+    .timeline-item p { font-size: .84rem; color: var(--muted); }
+
+    /* ── COMMUNITY ── */
+    #community { background: var(--light); }
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
     }
-    .timeline-item p { font-size: .9rem; }
+    .community-card {
+      background: var(--white);
+      border: 1px solid var(--mid);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-decoration: none;
+      transition: border-color .2s, box-shadow .2s;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .community-card:hover { border-color: var(--teal); box-shadow: var(--shadow-md); }
+    .community-icon { font-size: 1.5rem; margin-bottom: .25rem; }
+    .community-card h4 { font-size: .9rem; color: var(--primary); line-height: 1.4; }
+    .community-card p { font-size: .8rem; color: var(--muted); margin: 0; line-height: 1.55; }
 
     /* ── IMPACT ── */
-    #impact .section-inner {
+    #impact { background: var(--white); }
+    .impact-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3rem;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
     }
     .impact-card {
       text-align: center;
-      padding: 2rem 1.25rem;
+      padding: 1.75rem 1rem;
       border-radius: var(--radius);
-      background: var(--white);
-      box-shadow: var(--shadow);
+      background: var(--light);
+      border: 1px solid var(--mid);
     }
     .impact-num {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       font-weight: 800;
       color: var(--teal);
+      letter-spacing: -.04em;
       line-height: 1;
       margin-bottom: .35rem;
     }
-    .impact-label {
-      font-size: .85rem;
-      color: var(--muted);
-      line-height: 1.4;
-    }
+    .impact-label { font-size: .82rem; color: var(--muted); line-height: 1.45; }
 
     /* ── TESTIMONIALS ── */
-    #testimonials { background: var(--navy); }
-    #testimonials h2 { color: var(--white); }
-    #testimonials .section-label { color: var(--teal-light); }
+    #testimonials { background: var(--light); }
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      margin-top: 3rem;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
     }
     .testimonial-card {
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.1);
+      background: var(--white);
+      border: 1px solid var(--mid);
       border-radius: var(--radius);
-      padding: 2rem;
+      padding: 1.75rem;
     }
     .testimonial-quote {
-      font-size: .95rem;
-      color: rgba(255,255,255,.82);
+      font-size: .9rem;
+      color: var(--text);
       line-height: 1.75;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       font-style: italic;
     }
-    .testimonial-author {
-      display: flex; align-items: center; gap: .85rem;
-    }
+    .testimonial-author { display: flex; align-items: center; gap: .75rem; }
     .author-avatar {
-      width: 40px; height: 40px;
-      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      width: 38px; height: 38px;
+      background: var(--teal-bg);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      color: var(--white);
+      color: var(--teal);
       font-weight: 700;
-      font-size: .9rem;
+      font-size: .85rem;
       flex-shrink: 0;
+      border: 1px solid rgba(13,148,136,.2);
     }
-    .author-name {
-      font-size: .9rem;
-      font-weight: 600;
-      color: var(--white);
-    }
-    .author-title { font-size: .78rem; color: rgba(255,255,255,.55); }
+    .author-name { font-size: .88rem; font-weight: 600; color: var(--primary); }
+    .author-title { font-size: .75rem; color: var(--muted); }
 
-    /* ── CONTACT / LEAD GEN ── */
-    #contact {
-      background: var(--light);
-    }
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
     .contact-inner {
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1.4fr;
-      gap: 5rem;
+      gap: 4.5rem;
       align-items: start;
     }
-    .contact-info h2 { margin-bottom: 1rem; }
-    .contact-info p { margin-bottom: 2rem; }
-    .contact-reasons { display: flex; flex-direction: column; gap: 1rem; }
-    .reason {
-      display: flex; gap: .9rem; align-items: flex-start;
-    }
+    .contact-info h2 { margin-bottom: .9rem; }
+    .contact-info > p { margin-bottom: 1.75rem; color: var(--muted); }
+    .contact-reasons { display: flex; flex-direction: column; gap: .85rem; }
+    .reason { display: flex; gap: .85rem; align-items: flex-start; }
     .reason-icon {
-      width: 42px; height: 42px; flex-shrink: 0;
-      background: var(--white);
-      border: 1.5px solid var(--mid);
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--teal-bg);
       border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
-    .reason-text strong { display: block; font-size: .95rem; color: var(--navy); margin-bottom: .15rem; }
-    .reason-text span { font-size: .85rem; color: var(--muted); }
+    .reason-text strong { display: block; font-size: .9rem; color: var(--primary); margin-bottom: .1rem; }
+    .reason-text span { font-size: .82rem; color: var(--muted); }
 
-    /* FORM */
+    /* form */
     .contact-form-card {
       background: var(--white);
-      border-radius: 16px;
-      padding: 2.75rem;
+      border-radius: var(--radius);
+      padding: 2.25rem;
       box-shadow: var(--shadow-lg);
       border: 1px solid var(--mid);
     }
-    .form-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: .35rem;
-    }
-    .form-subtitle { font-size: .88rem; margin-bottom: 2rem; }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { display: flex; flex-direction: column; gap: .45rem; }
+    .form-title { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: .3rem; }
+    .form-subtitle { font-size: .84rem; color: var(--muted); margin-bottom: 1.75rem; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+    .form-group { display: flex; flex-direction: column; gap: .35rem; }
     .form-group.full { grid-column: 1 / -1; }
-    label {
-      font-size: .8rem;
-      font-weight: 600;
-      color: var(--navy);
-      letter-spacing: .02em;
-    }
+    label { font-size: .76rem; font-weight: 600; color: var(--primary); letter-spacing: .02em; }
     input, select, textarea {
-      padding: .7rem 1rem;
+      padding: .65rem .9rem;
       border: 1.5px solid var(--mid);
       border-radius: 8px;
-      font-size: .9rem;
+      font-size: .875rem;
       font-family: 'Inter', sans-serif;
       color: var(--text);
       background: var(--white);
@@ -597,82 +799,97 @@
     input:focus, select:focus, textarea:focus {
       outline: none;
       border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(13,148,136,.12);
+      box-shadow: 0 0 0 3px rgba(13,148,136,.1);
     }
-    textarea { resize: vertical; min-height: 110px; }
+    textarea { resize: vertical; min-height: 100px; }
     .form-submit {
       width: 100%;
       background: var(--teal);
       color: var(--white);
       border: none;
-      padding: .9rem 2rem;
+      padding: .85rem 2rem;
       border-radius: 8px;
-      font-size: 1rem;
+      font-size: .95rem;
       font-weight: 700;
+      font-family: 'Inter', sans-serif;
       cursor: pointer;
       transition: background .2s;
-      margin-top: 1rem;
+      margin-top: .9rem;
     }
     .form-submit:hover { background: var(--teal-light); }
-    .form-note {
-      text-align: center;
-      font-size: .78rem;
-      color: var(--muted);
-      margin-top: .75rem;
-    }
+    .form-submit:disabled { opacity: .6; cursor: not-allowed; }
+    .form-note { text-align: center; font-size: .74rem; color: var(--muted); margin-top: .65rem; }
     .form-success {
       display: none;
       text-align: center;
       padding: 2rem;
     }
-    .form-success .checkmark {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    .form-success .checkmark { font-size: 2.75rem; margin-bottom: .9rem; }
+    .form-success h3 { color: var(--teal); margin-bottom: .4rem; }
+    .form-success p { color: var(--muted); font-size: .9rem; }
+    .form-error {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      font-size: .84rem;
+      color: #dc2626;
+      margin-top: .75rem;
     }
-    .form-success h3 { color: var(--teal); margin-bottom: .5rem; }
 
     /* ── FOOTER ── */
     footer {
-      background: var(--navy);
-      padding: 3rem 2rem;
+      background: var(--light);
+      border-top: 1px solid var(--mid);
+      padding: 2.5rem 2rem;
       text-align: center;
     }
     .footer-name {
-      font-family: 'Playfair Display', serif;
-      color: var(--white);
-      font-size: 1.4rem;
-      margin-bottom: .5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -.02em;
+      margin-bottom: .35rem;
     }
-    .footer-title { color: rgba(255,255,255,.55); font-size: .88rem; margin-bottom: 1.5rem; }
-    .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .footer-title { color: var(--muted); font-size: .84rem; margin-bottom: 1.4rem; }
+    .footer-links { display: flex; justify-content: center; gap: 1.75rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
     .footer-links a {
-      color: rgba(255,255,255,.6);
+      color: var(--muted);
       text-decoration: none;
-      font-size: .85rem;
+      font-size: .82rem;
       transition: color .2s;
     }
-    .footer-links a:hover { color: var(--teal-light); }
-    .footer-copy { font-size: .78rem; color: rgba(255,255,255,.3); }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-copy { font-size: .74rem; color: var(--muted); opacity: .6; }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .hero-photo-wrap { order: -1; }
-      .hero-photo-card { width: 280px; }
-      .hero-stats { left: 0; bottom: -16px; gap: 1rem; }
-      #about .section-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-photo-card { width: 260px; }
+      .hero-stats { left: 0; bottom: -14px; gap: 1rem; }
+      #about .section-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .services-grid { grid-template-columns: 1fr; }
-      #topics .section-inner { grid-template-columns: 1fr; gap: 3rem; }
-      #impact .section-inner { grid-template-columns: repeat(2, 1fr); }
+      .media-grid { grid-template-columns: 1fr 1fr; }
+      .awards-grid { grid-template-columns: 1fr; }
+      .patents-grid { grid-template-columns: 1fr; }
+      .writing-intro { grid-template-columns: 1fr; }
+      .topics-wrapper { grid-template-columns: 1fr; }
+      .career-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .community-grid { grid-template-columns: 1fr 1fr; }
+      .impact-grid { grid-template-columns: repeat(2, 1fr); }
       .testimonials-grid { grid-template-columns: 1fr; }
-      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links { display: none; }
     }
-
     @media (max-width: 600px) {
-      #impact .section-inner { grid-template-columns: 1fr 1fr; }
+      .media-grid { grid-template-columns: 1fr; }
+      .community-grid { grid-template-columns: 1fr; }
+      .impact-grid { grid-template-columns: 1fr 1fr; }
       .form-grid { grid-template-columns: 1fr; }
       .form-group.full { grid-column: 1; }
+      section { padding: 60px 1.25rem; }
     }
   </style>
 </head>
@@ -683,8 +900,10 @@
   <a href="#hero" class="nav-logo">Farah Ali</a>
   <ul class="nav-links">
     <li><a href="#services">Work With Me</a></li>
-    <li><a href="#topics">Speaking</a></li>
+    <li><a href="#media">Speaking &amp; Media</a></li>
+    <li><a href="#awards">Awards</a></li>
     <li><a href="#career">Career</a></li>
+    <li><a href="#writing">Writing</a></li>
     <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
   </ul>
 </nav>
@@ -693,14 +912,16 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-eyebrow"><span></span>Tech Executive. Board Member.Keynote Speaker. Innovator. Community Builder
-</div>
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-dot"></div>
+        Tech Executive · Board Member · Keynote Speaker · Innovator · Community Builder
+      </div>
       <h1>Building the Future<br>of <em>Technology</em><br>and Leadership</h1>
       <p class="hero-sub">
         Farah Ali is a seasoned technology executive, keynote speaker, entrepreneur, and non-profit founder
-        with a career spanning the world's most influential technology companies. Her journey from
-        a new college graduate at Microsoft to Vice President of Engineering at Electronic Arts
-        reflects a relentless pursuit of impact at scale. With over 20 years of driving large-scale engineering at Microsoft, eBay, and Electronic Arts Farah has worked in teams serving millions of customers worldwide and expanded her focus to AI Transformation helping organizations define where and how emerging technologies reshape their future. Beyond the corporate world, Farah founded multiple global communities connecting women in STEM, and empowering under represented and economically disadvantaged communities. She is a board member, investor, advisor, educator and a passionate advocate for representation in tech.
+        with a career spanning the world's most influential technology companies. From a new college
+        graduate at Microsoft to VP of Engineering at Electronic Arts — 20+ years of driving large-scale
+        engineering, AI transformation, and inclusive community building.
       </p>
       <div class="hero-tags">
         <span class="tag">AI &amp; Technology Strategy</span>
@@ -711,12 +932,13 @@
       </div>
       <div class="hero-btns">
         <a href="#contact" class="btn-primary">Explore Ways to Work Together</a>
+        <a href="#media" class="btn-outline">Watch &amp; Listen</a>
       </div>
     </div>
 
     <div class="hero-photo-wrap">
       <div class="hero-photo-card">
-        <img src="assets/headshot.jpg" alt="Farah Ali — Tech Executive and Keynote Speaker" />
+        <img src="assets/Farah_Ali_hs.jpg" alt="Farah Ali — Tech Executive and Keynote Speaker" />
         <div class="hero-stats">
           <div class="stat-item">
             <span class="stat-num">20+</span>
@@ -756,13 +978,13 @@
   <div class="section-inner">
     <div class="section-label">Work With Farah</div>
     <h2>Three Ways to Engage</h2>
-    <p style="max-width:560px;">
+    <p class="section-intro">
       Whether you need an inspiring keynote, strategic technology guidance, or experienced
       board-level leadership, Farah brings deep expertise and authentic conviction to every engagement.
     </p>
     <div class="services-grid">
 
-      <div class="service-card featured">
+      <div class="service-card">
         <div class="service-icon">🎤</div>
         <h3>Keynote Speaking</h3>
         <p>Compelling, research-backed talks that move audiences to action on AI, tech leadership, and building inclusive organizations.</p>
@@ -776,7 +998,7 @@
         <a href="#contact" class="service-cta">Book a Talk</a>
       </div>
 
-      <div class="service-card">
+      <div class="service-card featured">
         <div class="service-icon">💡</div>
         <h3>Strategic Consulting</h3>
         <p>Hands-on partnership to help technology organizations navigate AI transformation, scale engineering teams, and build executive pipelines.</p>
@@ -811,81 +1033,308 @@
 <!-- SPEAKING TOPICS -->
 <section id="topics">
   <div class="section-inner">
-    <div>
-      <div class="section-label">Speaking Topics</div>
-      <h2>Talks That<br>Spark Change</h2>
-      <p style="margin-bottom: 0; max-width:420px;">
-        Farah's talks combine two decades of hands-on experience with data-driven
-        insights — crafted for executives, engineers, and emerging leaders alike.
-      </p>
-      <div class="speaking-proof">
-        <h3>Past Speaking Highlights</h3>
-        <div class="proof-items">
-          <div class="proof-item">
-            <div class="proof-dot"></div>
-            <span>Keynote Speaker — Girls Who Code Summer Immersion Program (3 consecutive years)</span>
+    <div class="section-label">Speaking Topics</div>
+    <h2>Talks That Spark Change</h2>
+    <p class="section-intro">
+      Farah's talks combine two decades of hands-on experience with data-driven insights —
+      crafted for executives, engineers, and emerging leaders alike.
+    </p>
+    <div class="topics-wrapper">
+      <div class="topics-grid">
+        <div class="topic-item">
+          <div class="topic-num">01</div>
+          <div>
+            <h4>AI Transformation at Scale</h4>
+            <p>How enterprises can responsibly adopt AI without losing the human element — strategies from the trenches of big tech.</p>
           </div>
-          <div class="proof-item">
-            <div class="proof-dot"></div>
-            <span>Grace Hopper Celebration — Largest tech conference for women in computing</span>
+        </div>
+        <div class="topic-item">
+          <div class="topic-num">02</div>
+          <div>
+            <h4>Engineering Leadership in the Modern Era</h4>
+            <p>Building high-performing teams, navigating ambiguity, and growing from individual contributor to C-suite.</p>
           </div>
-          <div class="proof-item">
-            <div class="proof-dot"></div>
-            <span>Open SV Forum 2019 — Engineering leadership &amp; player technology</span>
+        </div>
+        <div class="topic-item">
+          <div class="topic-num">03</div>
+          <div>
+            <h4>Women &amp; Underrepresented Groups in Tech</h4>
+            <p>Practical frameworks for organizations and individuals seeking to close the representation gap in STEM.</p>
           </div>
-          <div class="proof-item">
-            <div class="proof-dot"></div>
-            <span>Startup Grind Islamabad — Entrepreneurship &amp; women in STEM fireside chat</span>
+        </div>
+        <div class="topic-item">
+          <div class="topic-num">04</div>
+          <div>
+            <h4>From Engineer to Entrepreneur</h4>
+            <p>Lessons from building a VC-backed startup, angel investing, and knowing when to leap from corporate to founder.</p>
           </div>
-          <div class="proof-item">
-            <div class="proof-dot"></div>
-            <span>EA All-Hands &amp; Internal Executive Events — Technology vision &amp; culture</span>
+        </div>
+        <div class="topic-item">
+          <div class="topic-num">05</div>
+          <div>
+            <h4>Building Technology for Billions</h4>
+            <p>The architecture, culture, and leadership required to scale platforms serving hundreds of millions of users.</p>
+          </div>
+        </div>
+        <div class="topic-item">
+          <div class="topic-num">06</div>
+          <div>
+            <h4>Purpose-Driven Leadership</h4>
+            <p>How to align personal values with organizational goals — and why the most impactful leaders lead with empathy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="speaking-proof">
+          <h3>Past Speaking Highlights</h3>
+          <div class="proof-items">
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>Keynote Speaker — Girls Who Code Summer Immersion Program (3 consecutive years)</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>Grace Hopper Celebration — Largest tech conference for women in computing</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>Open SV Forum 2019 — Engineering leadership &amp; player technology</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>Startup Grind Islamabad — Entrepreneurship &amp; women in STEM fireside chat</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>The Economist — Digital Transformation Panel</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>ACM — Celebrating Technology Leaders, Episode 12</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>Stealth Summit 2025 — Executive Speaker</span>
+            </div>
+            <div class="proof-item">
+              <div class="proof-dot"></div>
+              <span>CaterpillHERS Freelance Accelerator — Featured Speaker</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="topics-grid">
-      <div class="topic-item">
-        <div class="topic-num">01</div>
-        <div>
-          <h4>AI Transformation at Scale</h4>
-          <p>How enterprises can responsibly adopt AI without losing the human element — strategies from the trenches of big tech.</p>
-        </div>
+<!-- MEDIA & APPEARANCES -->
+<section id="media">
+  <div class="section-inner">
+    <div class="section-label">Podcasts · Panels · Press</div>
+    <h2>Speaking &amp; Media Appearances</h2>
+    <p class="section-intro">
+      Farah shares insights on technology, leadership, and diversity across podcasts, panels, and publications.
+    </p>
+    <div class="media-grid">
+
+      <a class="media-card" href="https://podcasts.apple.com/in/podcast/the-power-of-difference-with-electronic-arts-farah-ali/id1623472433?i=1000595998443" target="_blank" rel="noopener">
+        <div class="media-type">🎙 Podcast</div>
+        <h4>In Her Ellement — The Power of Difference</h4>
+        <p>Boston Consulting Group · A conversation on building inclusive cultures and leading with difference in big tech.</p>
+        <div class="media-link-arrow">Listen on Apple Podcasts →</div>
+      </a>
+
+      <a class="media-card" href="https://redis.io/the-data-economy-podcast/episode-9/" target="_blank" rel="noopener">
+        <div class="media-type">🎙 Podcast</div>
+        <h4>The Data Economy — Immersive Player Experiences with Real-Time Data</h4>
+        <p>Host Michael Krigsman · How real-time data powers next-generation gaming experiences at scale.</p>
+        <div class="media-link-arrow">Listen on Redis →</div>
+      </a>
+
+      <a class="media-card" href="https://www.youtube.com/watch?v=0FQlhjyNzVw" target="_blank" rel="noopener">
+        <div class="media-type">▶ Video</div>
+        <h4>The Economist — Digital Transformation Panel</h4>
+        <p>Farah joins industry leaders to discuss the future of enterprise digital transformation and technology strategy.</p>
+        <div class="media-link-arrow">Watch on YouTube →</div>
+      </a>
+
+      <div class="media-card media-card-nohref">
+        <div class="media-type">🎙 Podcast</div>
+        <h4>ACM — Celebrating Technology Leaders, Episode 12</h4>
+        <p>Association for Computing Machinery · <em>Empowered by Support: Communities, Connections &amp; Careers</em></p>
+        <div class="media-link-arrow" style="color:var(--muted)">ACM Panel</div>
       </div>
-      <div class="topic-item">
-        <div class="topic-num">02</div>
-        <div>
-          <h4>Engineering Leadership in the Modern Era</h4>
-          <p>Building high-performing teams, navigating ambiguity, and growing from individual contributor to C-suite.</p>
-        </div>
+
+      <a class="media-card" href="https://www.ea.com/news/farah-ali-purpose-and-beliefs" target="_blank" rel="noopener">
+        <div class="media-type">📰 Feature</div>
+        <h4>EA.com — Purpose and Beliefs</h4>
+        <p>Electronic Arts spotlights Farah's leadership philosophy, values, and vision for technology and people.</p>
+        <div class="media-link-arrow">Read on EA.com →</div>
+      </a>
+
+      <a class="media-card" href="https://supplychainnow.com/episode-554/" target="_blank" rel="noopener">
+        <div class="media-type">🎙 Podcast</div>
+        <h4>Supply Chain Now — Episode 554</h4>
+        <p>A discussion on technology's role in supply chain innovation and the future of logistics tech.</p>
+        <div class="media-link-arrow">Listen →</div>
+      </a>
+
+      <a class="media-card" href="https://www.linkedin.com/posts/farahmali_im-taking-a-moment-to-just-be-giddy-the-activity-7312959823661133826-3wvH" target="_blank" rel="noopener">
+        <div class="media-type">🎤 Speaker</div>
+        <h4>Stealth Summit 2025</h4>
+        <p>Featured speaker at this exclusive executive technology summit focused on emerging innovation.</p>
+        <div class="media-link-arrow">View on LinkedIn →</div>
+      </a>
+
+      <a class="media-card" href="https://www.linkedin.com/posts/caterpillhers_caterpillhers-freelanceaccelerator-thankyou-activity-7336322872086335488-b9he" target="_blank" rel="noopener">
+        <div class="media-type">🎤 Speaker</div>
+        <h4>CaterpillHERS Freelance Accelerator</h4>
+        <p>Empowering women freelancers and entrepreneurs — insights on navigating tech and building a personal brand.</p>
+        <div class="media-link-arrow">View on LinkedIn →</div>
+      </a>
+
+      <a class="media-card" href="https://www.linkedin.com/posts/farahmali_iwd2025-accelerateaction-internationalwomenday-activity-7306010133514330112-HPOy" target="_blank" rel="noopener">
+        <div class="media-type">🎤 Speaker</div>
+        <h4>International Women's Day 2025</h4>
+        <p>#AccelerateAction — Farah speaks on accelerating progress for women in technology and leadership.</p>
+        <div class="media-link-arrow">View on LinkedIn →</div>
+      </a>
+
+      <div class="media-card media-card-nohref">
+        <div class="media-type">🎙 Podcast</div>
+        <h4>Techunhinged Podcast</h4>
+        <p>An unfiltered conversation on technology leadership, innovation, and the future of the industry.</p>
+        <div class="media-link-arrow" style="color:var(--muted)">Podcast Appearance</div>
       </div>
-      <div class="topic-item">
-        <div class="topic-num">03</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="section-inner">
+    <div class="section-label">Recognition</div>
+    <h2>Awards &amp; Honors</h2>
+    <p class="section-intro">
+      Recognized by industry organizations and publications for leadership, innovation, and advancing diversity in technology.
+    </p>
+    <div class="awards-grid">
+
+      <a class="award-card" href="https://www.linkedin.com/posts/farahmali_i-was-genuinely-surprised-in-the-best-way-activity-7316546322096889856-whx6" target="_blank" rel="noopener">
+        <div class="award-icon">🏆</div>
         <div>
-          <h4>Women &amp; Underrepresented Groups in Tech</h4>
-          <p>Practical frameworks for organizations and individuals seeking to close the representation gap in STEM.</p>
+          <div class="award-year">2025</div>
+          <h4>Inclusive Leader Award — National Diversity &amp; Leadership Conference</h4>
+          <p>Recognized at NDLC in Los Angeles for outstanding commitment to inclusive leadership and equity in technology.</p>
         </div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-num">04</div>
+      </a>
+
+      <a class="award-card" href="https://www.globalwomenasia.org/award-2024" target="_blank" rel="noopener">
+        <div class="award-icon">🌏</div>
         <div>
-          <h4>From Engineer to Entrepreneur</h4>
-          <p>Lessons from building a VC-backed startup, angel investing, and knowing when to leap from corporate to founder.</p>
+          <div class="award-year">2024</div>
+          <h4>Global Women Asia — Women in STEM Groundbreaker Honoree</h4>
+          <p>Honored as a Groundbreaker by Global Women Asia and Pakistani Women in Computing for contributions to STEM leadership.</p>
         </div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-num">05</div>
+      </a>
+
+      <a class="award-card" href="https://www.ea.com/news/farah-ali-purpose-and-beliefs" target="_blank" rel="noopener">
+        <div class="award-icon">🎮</div>
         <div>
-          <h4>Building Technology for Billions</h4>
-          <p>The architecture, culture, and leadership required to scale platforms serving hundreds of millions of users.</p>
+          <div class="award-year">EA Award</div>
+          <h4>Electronic Arts — Purpose &amp; Beliefs Teamwork Award</h4>
+          <p>EA company-wide award recognizing the engineering team's exceptional collaboration, impact, and shared mission.</p>
         </div>
-      </div>
-      <div class="topic-item">
-        <div class="topic-num">06</div>
+      </a>
+
+      <a class="award-card" href="https://diversityjournal.com/16563-2017-women-worth-watching-in-stem-announced/" target="_blank" rel="noopener">
+        <div class="award-icon">⭐</div>
         <div>
-          <h4>Purpose-Driven Leadership</h4>
-          <p>How to align personal values with organizational goals — and why the most impactful leaders lead with empathy.</p>
+          <div class="award-year">2017</div>
+          <h4>Women Worth Watching in STEM — Profiles in Diversity Journal</h4>
+          <p>Named one of the top Women Worth Watching in STEM by Diversity Journal, recognizing excellence in science, technology, engineering, and math.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- PATENTS -->
+<section id="patents">
+  <div class="section-inner">
+    <div class="section-label">Innovation</div>
+    <h2>Patents</h2>
+    <p class="section-intro">
+      Farah has contributed to intellectual property across multiple technology domains throughout her career at Microsoft and eBay.
+    </p>
+    <div class="patents-grid">
+
+      <div class="patent-card">
+        <div class="patent-badge">📋 Patent · eBay</div>
+        <h4>Inventory Listing Optimization for Online Marketplaces</h4>
+        <p>Methods, systems, and apparatus for controlling inventory of items for sale on an online marketplace. The invention projects demand and available inventory, then determines a recommended future time period for listing an item to maximize seller outcomes — delivered via a user-facing recommendation interface.</p>
+      </div>
+
+      <div class="patent-card">
+        <div class="patent-badge">📋 Patent · Microsoft</div>
+        <h4>Search &amp; Information Retrieval Systems</h4>
+        <p>Contributions to search technology and information retrieval systems during tenure on the Bing Search engineering team at Microsoft, focusing on relevance, scale, and quality of search results delivered to millions of users.</p>
+      </div>
+
+    </div>
+    <p class="patents-note">
+      View full patent portfolio on <a href="https://www.linkedin.com/in/farahmali/details/patents/" target="_blank" rel="noopener">LinkedIn</a>.
+    </p>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="section-inner">
+    <div class="section-label">Thought Leadership</div>
+    <h2>Writing &amp; Insights</h2>
+    <p class="section-intro">
+      Farah shares candid perspectives on leadership, AI, resilience, and the human side of technology on Medium.
+    </p>
+    <div class="writing-intro">
+      <div class="writing-feature">
+        <h3>What Farah Writes About</h3>
+        <p>
+          From empathetic leadership to building AI-ready teams, Farah's writing draws on 20+ years of
+          real-world experience at the intersection of technology and people. Her essays are practical,
+          personal, and grounded in lessons learned across Microsoft, eBay, and Electronic Arts.
+        </p>
+        <div class="writing-topics">
+          <div class="writing-topic"><div class="writing-topic-dot"></div>Empathetic &amp; human-centric leadership</div>
+          <div class="writing-topic"><div class="writing-topic-dot"></div>Building AI-ready, curious teams</div>
+          <div class="writing-topic"><div class="writing-topic-dot"></div>Resilience and personal growth in tech</div>
+          <div class="writing-topic"><div class="writing-topic-dot"></div>Women in STEM — pipeline and retention</div>
+          <div class="writing-topic"><div class="writing-topic-dot"></div>Engineering culture and organizational design</div>
+        </div>
+        <a class="medium-cta" href="https://medium.com/@fali" target="_blank" rel="noopener">Read on Medium →</a>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div class="writing-feature" style="padding:1.5rem;">
+          <h3 style="font-size:.95rem;">"What is my leadership style?"</h3>
+          <p>
+            A reflection on the fluid, evolving nature of leadership — why assuming a single style for all situations limits a leader's potential, and how staying adaptable is the key to sustained impact.
+          </p>
+        </div>
+        <div class="writing-feature" style="padding:1.5rem;">
+          <h3 style="font-size:.95rem;">Building AI-Ready Teams</h3>
+          <p>
+            On hiring people who are curious and open — "who see AI as an accelerant, not a threat to quality or process" — and how leading by example shifts organizational culture toward innovation.
+          </p>
+        </div>
+        <div class="writing-feature" style="padding:1.5rem;">
+          <h3 style="font-size:.95rem;">The Elasticity of Resilience</h3>
+          <p>
+            Exploring resilience not as "bouncing back" but as the elasticity of thought — the ability to adapt, improvise, and find new paths forward through challenge and change.
+          </p>
         </div>
       </div>
     </div>
@@ -896,74 +1345,124 @@
 <section id="career">
   <div class="section-inner">
     <div class="section-label">Career Journey</div>
-    <h2>A Track Record<br>of Impact</h2>
-    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items:start; margin-top: 1rem;">
+    <h2>A Track Record of Impact</h2>
+    <div class="career-grid">
+
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-meta">Present</div>
           <h3>VP, AI Transformation &amp; Technology Growth Strategy</h3>
           <div class="timeline-company">Electronic Arts (EA)</div>
-          <p>Defining EA's AI strategy and future technology roadmap for one of the world's largest interactive entertainment companies.Led technology growth initiatives and created strategy for EA's next generation player platform, reporting to the CTO.</p>
-          <p>Built and scaled engineering teams from under 10 to 100+ engineers. Platform supports 500M global players. Team earned company-wide award for teamwork and impact.</p>
+          <p>Defining EA's AI strategy and future technology roadmap. Led next-generation player platform initiatives reporting to the CTO. Built engineering teams from under 10 to 100+ engineers. Platform supports 500M global players. Team earned company-wide Teamwork Award.</p>
         </div>
         <div class="timeline-item">
           <div class="timeline-meta">E-Commerce</div>
           <h3>Director of Engineering</h3>
           <div class="timeline-company">eBay</div>
-          <p>Senior engineering leadership driving scale and reliability across eBay's global marketplace platform.</p>
+          <p>Senior engineering leadership driving scale and reliability across eBay's global marketplace platform. Contributed to patent innovations in inventory optimization.</p>
         </div>
         <div class="timeline-item">
           <div class="timeline-meta">Career Start</div>
           <h3>Software Engineer → Senior Engineering Leadership</h3>
           <div class="timeline-company">Microsoft</div>
-          <p>Began career as a new college graduate, rising through engineering ranks at one of the world's premier technology companies.</p>
+          <p>Began career as a new college graduate on the Bing Search team, rising through engineering ranks at one of the world's premier technology companies.</p>
         </div>
       </div>
 
-      <div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-meta">Entrepreneurship</div>
-            <h3>Co-Founder &amp; CTO</h3>
-            <div class="timeline-company">FreightWeb</div>
-            <p>Co-founded VC-backed logistics technology startup optimizing partial truckload freight operations.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Community</div>
-            <h3>Co-Founder &amp; Board Chair</h3>
-            <div class="timeline-company">Pakistani Women in Computing (PWiC)</div>
-            <p>Founded global organization connecting Pakistani women in tech and their allies across the globe.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Social Impact</div>
-            <h3>Founder &amp; President</h3>
-            <div class="timeline-company">One Good Act</div>
-            <p>Non-profit focused on economic empowerment for communities living below the poverty line.</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-meta">Investing</div>
-            <h3>Investor and Startup Advisor</h3>
-            <div class="timeline-company">Embedded Ventures &amp; Multiple Startups</div>
-            <p>Angel investor and startup advisor focused on early-stage technology companies.</p>
-          </div>
-           <div class="timeline-item">
-            <div class="timeline-meta">Teaching</div>
-            <h3>Educator & Adjunct Faculty</h3>
-            <div class="timeline-company">University of Washington, Seattle</div>
-            <p>Taught a 400 level course in Software Entrepreneurship at the University of Washington - Michael G. Foster School of Business</p>
-          </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-meta">Entrepreneurship</div>
+          <h3>Co-Founder &amp; CTO</h3>
+          <div class="timeline-company">FreightWeb</div>
+          <p>Co-founded VC-backed logistics technology startup optimizing partial truckload freight operations.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Community</div>
+          <h3>Co-Founder &amp; Board Chair</h3>
+          <div class="timeline-company">Pakistani Women in Computing (PWiC)</div>
+          <p>Founded global organization connecting Pakistani women in tech and their allies across the globe. Focused on visibility, retention, and growth of women in STEM fields worldwide.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Social Impact</div>
+          <h3>Founder &amp; President</h3>
+          <div class="timeline-company">One Good Act</div>
+          <p>Non-profit focused on economic empowerment for communities living below the poverty line. Sponsored the SPRYNG Program's inaugural Youth Career Fair in partnership with the community.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Investing</div>
+          <h3>Investor &amp; Startup Advisor</h3>
+          <div class="timeline-company">Embedded Ventures &amp; Multiple Startups</div>
+          <p>Angel investor and startup advisor focused on early-stage technology companies.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-meta">Teaching</div>
+          <h3>Educator &amp; Adjunct Faculty</h3>
+          <div class="timeline-company">University of Washington, Seattle</div>
+          <p>Taught 400-level Software Entrepreneurship at the UW Michael G. Foster School of Business. Founding member of WELead — UW Foster School's Women's Entrepreneurial Leadership program.</p>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY IMPACT -->
+<section id="community">
+  <div class="section-inner">
+    <div class="section-label">Community &amp; Mentorship</div>
+    <h2>Giving Back</h2>
+    <p class="section-intro">
+      Farah believes deeply in paying it forward — mentoring the next generation of leaders and building
+      communities that create lasting economic and professional opportunity.
+    </p>
+    <div class="community-grid">
+
+      <a class="community-card" href="https://www.linkedin.com/posts/farahmali_day-2-of-washington-business-week-is-in-the-activity-7352057303958777858-2aMP" target="_blank" rel="noopener">
+        <div class="community-icon">🏫</div>
+        <h4>Washington Business Week — Mentor</h4>
+        <p>Mentoring high school students in business and leadership through this renowned week-long immersive program.</p>
+      </a>
+
+      <a class="community-card" href="https://www.linkedin.com/posts/mayahu_youth-career-fair-2025spryng-activity-7345892663788769280-Eee-" target="_blank" rel="noopener">
+        <div class="community-icon">🌱</div>
+        <h4>SPRYNG Program — Youth Career Fair Sponsor</h4>
+        <p>One Good Act sponsored the inaugural SPRYNG Youth Career Fair 2025, providing career exposure and opportunity to underserved youth communities.</p>
+      </a>
+
+      <div class="community-card" style="cursor:default;">
+        <div class="community-icon">👩‍💼</div>
+        <h4>WELead — UW Foster School</h4>
+        <p>Founding member of the Women's Entrepreneurial Leadership program at the University of Washington Michael G. Foster School of Business.</p>
+      </div>
+
+      <div class="community-card" style="cursor:default;">
+        <div class="community-icon">💻</div>
+        <h4>Pakistani Women in Computing (PWiC)</div>
+        <p>Co-founded global STEM community connecting Pakistani women technologists and their allies worldwide — building visibility, network, and career growth.</p>
+      </div>
+
+      <div class="community-card" style="cursor:default;">
+        <div class="community-icon">🎓</div>
+        <h4>Girls Who Code — Keynote Speaker</h4>
+        <p>Delivered keynote addresses at the Girls Who Code Summer Immersion Program for three consecutive years, inspiring the next generation of women in tech.</p>
+      </div>
+
+      <div class="community-card" style="cursor:default;">
+        <div class="community-icon">🤝</div>
+        <h4>One Good Act — Non-Profit Founder</h4>
+        <p>Founded non-profit organization focused on economic empowerment and poverty alleviation for under-resourced communities globally.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- IMPACT NUMBERS -->
-<section id="impact" style="background: var(--white); padding-top: 0;">
-  <div class="section-inner" style="margin-top: 0;">
-    <div class="section-label" style="text-align:center; margin-bottom: .5rem;">Impact by the Numbers</div>
-    <h2 style="text-align:center; margin-bottom:0;">Results That Speak<br>for Themselves</h2>
-    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem;">
+<section id="impact">
+  <div class="section-inner">
+    <div class="section-label" style="text-align:center;">Impact by the Numbers</div>
+    <h2 style="text-align:center;">Results That Speak for Themselves</h2>
+    <div class="impact-grid">
       <div class="impact-card">
         <div class="impact-num">500M</div>
         <div class="impact-label">Global users served by platforms Farah led</div>
@@ -977,8 +1476,8 @@
         <div class="impact-label">Years in technology leadership across 3 big tech companies</div>
       </div>
       <div class="impact-card">
-        <div class="impact-num">2</div>
-        <div class="impact-label">Organizations founded to advance underrepresented communities</div>
+        <div class="impact-num">2+</div>
+        <div class="impact-label">Global communities founded to advance underrepresented groups</div>
       </div>
     </div>
   </div>
@@ -988,7 +1487,7 @@
 <section id="testimonials">
   <div class="section-inner">
     <div class="section-label">What People Say</div>
-    <h2>Trusted by Leaders<br>Across the Industry</h2>
+    <h2>Trusted by Leaders Across the Industry</h2>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <p class="testimonial-quote">
@@ -1036,12 +1535,12 @@
   </div>
 </section>
 
-<!-- CONTACT / LEAD GEN -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <div class="contact-info">
       <div class="section-label">Get In Touch</div>
-      <h2>Let's Create<br>Something Great</h2>
+      <h2>Let's Create Something Great</h2>
       <p>
         Whether you're planning a conference, building a leadership team, or looking for
         a board member who truly understands technology — Farah would love to hear from you.
@@ -1051,7 +1550,7 @@
           <div class="reason-icon">🎤</div>
           <div class="reason-text">
             <strong>Speaking Engagements</strong>
-            <span>Conferences, Keynotes, Interviews, Universities and Corporate Events, Podcast appearances, and thought leadership contributions</span>
+            <span>Conferences, keynotes, universities, corporate events, podcasts, and thought leadership contributions</span>
           </div>
         </div>
         <div class="reason">
@@ -1072,10 +1571,13 @@
     </div>
 
     <div class="contact-form-card">
+      <!--
+        TO ACTIVATE: Sign up at formspree.io, create a form, and replace
+        YOUR_FORMSPREE_ID below with your actual form ID (e.g. xpwzgkql)
+      -->
       <form id="contactForm" onsubmit="handleSubmit(event)">
         <div class="form-title">Send Farah a Message</div>
-        <p class="form-subtitle">Fill out the form below and Farah's team will respond within 2 business days.</p>
-
+        <p class="form-subtitle">Fill out the form and Farah's team will respond within 2 business days.</p>
         <div class="form-grid">
           <div class="form-group">
             <label for="firstName">First Name *</label>
@@ -1097,20 +1599,20 @@
             <label for="type">Type of Engagement *</label>
             <select id="type" name="type" required>
               <option value="">— Select one —</option>
-              <option value="speaking">Speaking Engagements</option>
-              <option value="consulting">Consulting/Advisory Roles</option>
-              <option value="board">Board Roles</option>
+              <option value="speaking">Speaking Engagement</option>
+              <option value="consulting">Consulting / Advisory</option>
+              <option value="board">Board Role</option>
               <option value="other">Other</option>
             </select>
           </div>
           <div class="form-group full">
             <label for="message">Tell me about your opportunity *</label>
-            <textarea id="message" name="message" placeholder="Share details about your event, project, or opportunity — dates, format, audience, and anything else that would help Farah understand your needs." required></textarea>
+            <textarea id="message" name="message" placeholder="Share details about your event, project, or opportunity — dates, format, audience, and anything else relevant." required></textarea>
           </div>
         </div>
-
-        <button type="submit" class="form-submit">Send Message →</button>
+        <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
         <p class="form-note">🔒 Your information is kept strictly confidential.</p>
+        <div class="form-error" id="formError">Something went wrong. Please try again or email directly.</div>
       </form>
 
       <div class="form-success" id="formSuccess">
@@ -1127,38 +1629,67 @@
   <div class="footer-name">Farah Ali</div>
   <div class="footer-title">VP, AI Transformation &amp; Technology · Speaker · Advisor · Board Member</div>
   <div class="footer-links">
-    <a href="#about">About</a>
     <a href="#services">Work With Me</a>
-    <a href="#topics">Speaking Topics</a>
+    <a href="#media">Speaking &amp; Media</a>
+    <a href="#awards">Awards</a>
     <a href="#career">Career</a>
+    <a href="#writing">Writing</a>
     <a href="https://www.linkedin.com/in/farahmali/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://medium.com/@fali" target="_blank" rel="noopener">Medium</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="footer-copy">© 2026 Farah Ali. All rights reserved.</div>
 </footer>
 
 <script>
-  // smooth active nav state
+  // Active nav highlighting
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
     });
     navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current
-        ? 'var(--teal-light)' : '';
+      const href = a.getAttribute('href').replace('#', '');
+      a.style.color = href === current ? 'var(--teal)' : '';
     });
   });
 
-  // form submission demo
-  function handleSubmit(e) {
+  // Contact form — Formspree
+  async function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('contactForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-    // TODO: replace with your form backend (Formspree, Netlify Forms, etc.)
-    // e.g. fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(e.target) })
+    const form = e.target;
+    const btn = document.getElementById('submitBtn');
+    const errorEl = document.getElementById('formError');
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    errorEl.style.display = 'none';
+
+    try {
+      const res = await fetch('https://formspree.io/f/xpwzbkqn', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        const data = await res.json().catch(() => ({}));
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+        errorEl.textContent = data.error || 'Something went wrong. Please try again.';
+        errorEl.style.display = 'block';
+      }
+    } catch {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      errorEl.textContent = 'Network error. Please check your connection and try again.';
+      errorEl.style.display = 'block';
+    }
   }
 </script>
 </body>
